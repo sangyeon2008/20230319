@@ -1,0 +1,65 @@
+# 160586 대충만든 자판
+# def solution(keymap, targets):
+#     cnt=0
+#     answer = []
+#     dictionary={}
+#     for i in range(len(keymap)):
+#         for j in range(len(keymap[i])):
+#             if not keymap[i][j] in dictionary or dictionary[keymap[i][j]]>j+1:
+#                 dictionary[keymap[i][j]] = j+1
+#     for target in targets:
+#         for k in target:
+#             if not k in dictionary:
+#                 cnt = -1
+#                 break
+#             else:
+#                 cnt+= dictionary[k]
+#         answer.append(cnt)
+#     return answer
+#
+#     # dict={A: ,B: ,C: ,D: ,E: ,F: }
+#
+# print(solution(["ABACD", "BCEFD"],["ABCD","AABB"]))
+# print(solution(['A'],['BA']))
+#
+#
+# a=['a','b','c','d']
+# b=[1,2,3,4]
+# z=list(zip(a,b))
+# print(z)
+# c=dict(z)
+
+# d= {1:1,1:2}
+# print(d.get(1))
+# print(d.update())
+#
+# print(f"bool('') = {bool}",)
+
+# def recursion(a):
+#     if a==1: return 1
+#     return a + recursion(a-1)
+# print(recursion(10))
+
+
+#바탕화면 정리 161990
+def solution(wallpaper):
+    x = []
+    y=[]
+    answer=[]
+
+    for i in range(len(wallpaper)):
+        for j in range(len(wallpaper[i])):
+            if wallpaper[i][j]=="#":
+                x.append(j)
+                y.append(i)
+    for k in range(len(x)):
+        if x[k] != max(x) or  x[k] != min(x):
+            del x[k]
+
+
+
+
+    return answer
+print(solution([".#...",
+                "..#..",
+                "...#."]))
